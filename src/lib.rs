@@ -265,3 +265,28 @@ fn chunks(data: Vec<Uint>, chunk_size: usize) -> Vec<Vec<Uint>> {
 
     return results;
 }
+
+mod tests {
+    // Note this useful idiom: importing names from outer (for mod tests) scope.
+    use super::*;
+    use std::cmp::Ordering;
+
+    // init web3 conection
+    let web3HttpUrl = "https://api.avax-test.network/ext/bc/C/rpc";
+    let web3WebsocketUrl = "wss://api.avax-test.network/ext/bc/C/ws";
+    let mut web3m: Web3Manager = Web3Manager::new(web3HttpUrl, web3WebsocketUrl).await;
+
+    #[test]
+    fn test_gas_price() {
+        let result = gas_price(mut)
+        assert_eq!(Ordering::Greater, result);
+    }
+
+    #[test]
+    fn test_get_block() {
+        let result = get_account(mut)
+        assert_eq!(Ordering::Greater, result);
+    }
+
+  
+}
